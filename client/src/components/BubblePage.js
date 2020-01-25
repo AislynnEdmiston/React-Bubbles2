@@ -21,11 +21,13 @@ const BubblePage = () => {
       .catch(err => console.log(err))
   }, [refresh])
 
-
+  const refreshColor = () => {
+    setRefresh(!refresh)
+  }
 
   return (
     <>
-      <ColorList colors={colorList} updateColors={setColorList} />
+      <ColorList colors={colorList} updateColors={setColorList} refresh={refreshColor} />
       <Bubbles colors={colorList} />
     </>
   );
