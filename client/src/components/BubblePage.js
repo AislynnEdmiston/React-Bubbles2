@@ -9,7 +9,7 @@ const BubblePage = () => {
   const [refresh, setRefresh] = useState(false);
 
   useEffect(() => {
-    axios().get('http:localhost:5000/api/colors')
+    axios().get('/colors')
       .then(res => {
         console.log(res.data)
         if(localStorage.getItem('token')){
