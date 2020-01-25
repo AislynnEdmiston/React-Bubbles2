@@ -7,6 +7,7 @@ export const AxiosWithAuth = () => {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `${token}`
-        }
+        },
+        baseURL: "http://localhost:5000/api"
     })
 }
